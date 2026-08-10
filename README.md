@@ -1,220 +1,286 @@
-\# Lagos/Abuja Rent Prediction 🏠
+# Lagos/Abuja Rent Prediction 🏠
 
+A Machine Learning project for predicting house rent prices in Lagos and Abuja, Nigeria.
 
+## 📌 Project Overview
 
-\## Project Overview
+Lagos/Abuja Rent Prediction is a Machine Learning project developed as part of the 3MTT capstone project.
 
+The project addresses a common challenge faced by renters in Nigeria: the lack of reliable price benchmarks when searching for rental properties.
 
+The system uses property features such as location, number of bedrooms, bathrooms, toilets, serviced status, newly built status, and furnished status to predict house rent prices.
 
-Renters in Nigeria often struggle to know the fair price of properties because there is no reliable price benchmark.
+## 🎯 Problem Statement
 
+Renters in Lagos and Abuja often find it difficult to determine whether a property's asking price is reasonable because rental prices vary significantly depending on location and property features.
 
+The absence of accessible and reliable price benchmarks can make it difficult for renters to make informed housing decisions.
 
-This project uses Machine Learning to predict house rent prices based on property features.
+This project aims to provide a data-driven approach for estimating rental prices based on available property characteristics.
 
+## 💡 Project Objective
 
+The main objective of this project is to develop a Machine Learning model capable of predicting house rent prices in Lagos and Abuja based on property characteristics.
 
-\---
+The project also provides a simple Streamlit web application through which users can enter property details and receive an estimated rental price.
 
+## 📊 Dataset
 
+The dataset contains 98,080 property listings and 10 columns of original featuers.
 
-\## Problem Statement
+The original dataset contains information about property titles, locations, prices, property features, and amenities.
 
+### Main Features
 
+| Feature | Description |
 
-Many renters make decisions without knowing whether a listed property price is reasonable.
+|---|---|
 
+| Title | Property listing title |
 
+| More Info | Additional property information |
 
-The goal is to build a model that estimates rental prices using property information.
+| Location | Property location |
 
+| Price | Property rental price |
 
+| Serviced | Indicates whether the property is serviced |
 
-\---
+| Newly Built | Indicates whether the property is newly built |
 
+| Furnished | Indicates whether the property is furnished |
 
+| Bedrooms | Number of bedrooms |
 
-\## Solution
+| Bathrooms | Number of bathrooms |
 
+| Toilets | Number of toilets |
 
+## 🧹 Data Cleaning
 
-A Machine Learning model was developed to predict rent prices based on:
+The dataset required cleaning and transformation before it could be used for Machine Learning.
 
+The main preprocessing steps included:
+- Converting the `Price` column from text to numeric values.
 
+- Extracting numerical values from `Bedrooms`, `Bathrooms`, and `Toilets`.
 
-\- Location
+- Handling missing values.
 
-\- Number of bedrooms
+- Inspecting duplicate records.
 
-\- Number of bathrooms
+- Examining unusual and extreme price values.
 
-\- Number of toilets
+- Preparing categorical features for Machine Learning.
 
-\- Furnished status
+## 🔍 Exploratory Data Analysis
 
-\- Serviced status
+Exploratory Data Analysis was performed to understand the distribution of rental prices and the characteristics of the properties.
 
-\- Newly built status
+The analysis included:
 
+- Descriptive statistics.
 
+- Distribution of rental prices.
 
-\---
+- Identification of extreme values and outliers.
 
+- Examination of numerical features.
 
+- Visualization using histograms and boxplots.
 
-\## Dataset
+## ⚙️ Feature Engineering
 
+The property features were transformed into a format suitable for Machine Learning.
 
+The numerical features included:
 
-The dataset contains Nigerian property listings with:
+- Bedrooms
 
+- Bathrooms
 
+- Toilets
 
-\- 98,080 records
+- Serviced
 
-\- 10 original features
+- Newly Built
 
+- Furnished
 
+Location information was also incorporated into the model through feature encoding.
 
-\---
+## 🤖 Model Development
 
+The prepared dataset was divided into training and testing sets.
 
+A regression-based Machine Learning approach was used because the target variable, rental price, is a continuous numerical value.
 
-\## Machine Learning Approach
+The model was trained using the prepared property features and evaluated on unseen test data.
 
-
-
-The project followed these steps:
-
-
-
-1\. Data Collection
-
-2\. Data Cleaning
-
-3\. Exploratory Data Analysis
-
-4\. Feature Engineering
-
-5\. Model Training
-
-6\. Model Evaluation
-
-7\. Model Deployment
-
-
-
-\---
-
-
-
-\## Models Tested
-
-
+## 📈 Model Performance
 
 The following models were evaluated:
 
+- Linear Regression
 
+- Decision Tree Regressor
 
-\- Linear Regression
-
-\- Decision Tree Regressor
-
-\- Random Forest Regressor
-
-
+- Random Forest Regressor
 
 The final model selected:
 
+-Random Forest Regressor
 
+The model was evaluated using the following metrics:
 
-\*\*Random Forest Regressor\*\*
+- Mean Absolute Error (MAE)
 
+- Root Mean Squared Error (RMSE)
 
+- R² Score.
 
-\---
+| Metric | Result |
 
+|---|---:|
 
+| Mean Absolute Error (MAE) | ₦855,802.30 |
 
-\## Evaluation Metrics
+| Root Mean Squared Error (RMSE) | ₦1,224,883.73 |
 
+| R² Score | 0.4691 |
 
+The results provide a baseline for the predictive performance of the current model.
 
-The model was evaluated using:
+## 🖥️ Streamlit Application
 
+A Streamlit web application was developed as the project's MVP.
 
+Users can enter property characteristics such as:
 
-\- Mean Absolute Error (MAE)
+- Location
 
-\- Root Mean Squared Error (RMSE)
+- Bedrooms
 
-\- R² Score
+- Bathrooms
 
+- Toilets
 
+- Serviced status
 
-\---
+- Newly built status
 
+- Furnished status
 
+The application then uses the trained Machine Learning model to generate an estimated rental price.
 
-\## Application
+## 📁 Project Structure
 
+```text
 
+Lagos-Abuja-Rent-Prediction/
 
-A Streamlit web application was developed where users can enter:
+│
 
+├── app/
 
+│   └── app.py
 
-\- Property location
+│
 
-\- Bedrooms
+├── models/
 
-\- Bathrooms
+│   ├── best\_rent\_prediction\_model.pkl
 
-\- Toilets
+│   └── feature\_names.pkl
 
-\- Property features
+│
 
+├── notebooks/
 
+│   ├── 01\_Project\_Setup.ipynb
 
-and receive an estimated rent price.
+│   ├── 02\_Data\_Cleaning.ipynb
 
+│   ├── 03\_Exploratory\_Data\_Analysis.ipynb
 
+│   ├── 04\_Feature\_Engineering.ipynb
 
-\---
+│   ├── 05\_Model\_Training.ipynb
 
+│   └── 06 – Model Deployment.ipynb
 
+│
 
-\## Technologies Used
+├── .gitignore
 
+├── README.md
 
+└── requirements.txt
 
-\- Python
+## 🚀 How To Run The Project
 
-\- Pandas
+### 1. Clone the repository
 
-\- NumPy
+```bash
 
-\- Scikit-learn
+git clone https://github.com/InnoFrank/Lagos-Abuja-Rent-Prediction.git
 
-\- Streamlit
+### 2. Navigate into the project
 
-\- Matplotlib
+```bash
 
-\- Jupyter Notebook
+cd Lagos-Abuja-Rent-Prediction
 
+### 3. Create the Conda environment
 
+```bash
 
-\---
+conda create --name Rent\_Prediction python=3.11
 
+### 4. Activate the environment
 
+```bash
 
-\## Author
+conda activate Rent\_Prediction
 
+### 5. Install the required packages
 
+```bash
+
+pip install -r requirements.txt
+
+### 6. Run the Streamlit application
+
+```bash
+
+streamlit run app/app.py
+
+## 🛠️ Technologies Used
+
+- Python
+
+- Pandas
+
+- NumPy
+
+- Scikit-learn
+
+- Matplotlib
+
+- Jupyter Notebook
+
+- Anaconda
+
+- Streamlit
+
+- Git
+
+- GitHub
+
+## 👤 Author
 
 Nwosu Innocent Mmaduabuchi
 
+3MTT Learner — Data Science / Machine Learning
 
-
-Data Analyst | Aspiring Data Scientist
-
+GitHub: \[InnoFrank](https://github.com/InnoFrank)
