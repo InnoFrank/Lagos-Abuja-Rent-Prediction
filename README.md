@@ -254,6 +254,7 @@ pip install -r requirements.txt
 ```bash
 
 streamlit run app/app.py
+---
 
 ## 🛠️ Technologies Used
 
@@ -276,6 +277,7 @@ streamlit run app/app.py
 - Git
 
 - GitHub
+---
 
 ## 👤 Author
 
