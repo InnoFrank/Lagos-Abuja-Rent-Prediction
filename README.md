@@ -220,6 +220,7 @@ Lagos-Abuja-Rent-Prediction/
 ├── README.md
 
 └── requirements.txt
+```
 
 ## 🚀 How To Run The Project
 
@@ -258,7 +259,7 @@ pip install -r requirements.txt
 ```bash
 
 streamlit run app/app.py
----
+```
 
 ## 🛠️ Technologies Used
 
@@ -281,7 +282,7 @@ streamlit run app/app.py
 - Git
 
 - GitHub
----
+
 
 ## 👤 Author
 
