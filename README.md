@@ -124,37 +124,51 @@ The model was trained using the prepared property features and evaluated on unse
 
 ## 📈 Model Performance
 
-The following models were evaluated:
+Three regression models were evaluated during the project:
 
 - Linear Regression
-
 - Decision Tree Regressor
-
 - Random Forest Regressor
 
-The final model selected:
+The **Random Forest Regressor** was selected as the final model.
 
--Random Forest Regressor
-
-The model was evaluated using the following metrics:
-
-- Mean Absolute Error (MAE)
-
-- Root Mean Squared Error (RMSE)
-
-- R² Score.
+The model was evaluated on the test dataset using three regression metrics:
 
 | Metric | Result |
-
 |---|---:|
-
 | Mean Absolute Error (MAE) | ₦855,802.30 |
-
 | Root Mean Squared Error (RMSE) | ₦1,224,883.73 |
-
 | R² Score | 0.4691 |
 
-The results provide a baseline for the predictive performance of the current model.
+### Interpretation
+
+- **MAE:** On average, the model's predictions differ from the actual rental prices by approximately ₦855,802.
+- **RMSE:** The RMSE of approximately ₦1.22 million indicates that larger prediction errors have a stronger influence on the overall error measurement.
+- **R² Score:** The model explains approximately 46.9% of the variation in rental prices in the test dataset.
+
+These results provide a baseline for the current version of the rent prediction system.
+
+## ⚠️ Limitations
+
+The current model has some limitations:
+
+- The R² score indicates that a substantial portion of rental-price variation is not explained by the current features.
+- Rental prices can be strongly influenced by factors that may not be fully captured in the dataset.
+- The dataset contains extreme price values that can affect regression performance.
+- Location is an important factor in Nigerian rental prices, and representing location effectively remains a challenge.
+- The model should therefore be considered an estimation tool rather than a replacement for actual market valuation.
+
+## 🚀 Future Improvements
+
+Future versions of the project could improve prediction performance by:
+
+- Collecting more recent and geographically detailed rental data.
+- Improving location-based feature engineering.
+- Investigating additional Machine Learning algorithms.
+- Performing systematic hyperparameter tuning.
+- Applying additional outlier-handling techniques.
+- Adding more property features such as property size, estate information, and proximity to major facilities.
+- Continuously retraining the model as new rental-market data becomes available.
 
 ## 🖥️ Streamlit Application
 
