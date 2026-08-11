@@ -1,5 +1,10 @@
 # Lagos/Abuja Rent Prediction 🏠
 
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.9.0-orange?logo=scikit-learn)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Regression-green)
+
 A Machine Learning project for predicting house rent prices in Lagos and Abuja, Nigeria.
 
 ## 📌 Project Overview
