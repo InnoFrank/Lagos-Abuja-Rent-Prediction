@@ -173,6 +173,10 @@ Users can enter property characteristics such as:
 
 The application then uses the trained Machine Learning model to generate an estimated rental price.
 
+### Application Preview
+
+![Streamlit Application](screenshots/streamlit_app.png)
+
 ## 📁 Project Structure
 
 ```text

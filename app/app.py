@@ -4,8 +4,24 @@ import pandas as pd
 import numpy as np
 import joblib
 # Load the Model
-model = joblib.load("../models/best_rent_prediction_model.pkl")
-feature_names = joblib.load("../models/feature_names.pkl")
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+model_path = os.path.join(
+    BASE_DIR,
+    "models",
+    "best_rent_prediction_model.pkl"
+)
+
+feature_names_path = os.path.join(
+    BASE_DIR,
+    "models",
+    "feature_names.pkl"
+)
+
+model = joblib.load(model_path)
+feature_names = joblib.load(feature_names_path)
 location_columns = [
     col for col in feature_names
     if col.startswith("Location_")
