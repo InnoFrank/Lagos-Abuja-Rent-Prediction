@@ -305,8 +305,11 @@ streamlit run app/app.py
 
 ## 👤 Author
 
-Nwosu Innocent Mmaduabuchi
+**Nwosu Innocent Mmaduabuchi**
 
 3MTT Learner — Data Science / Machine Learning
 
-GitHub: \[InnoFrank](https://github.com/InnoFrank)
+### 📫 Contact
+
+- **GitHub:** [InnoFrank](https://github.com/InnoFrank)
+- **LinkedIn:** [Innocent Nwosu](https://www.linkedin.com/in/innocent-mmaduabuchi-nwosu-1439b9157)
