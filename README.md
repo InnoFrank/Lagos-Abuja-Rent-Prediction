@@ -192,6 +192,10 @@ Users can enter property characteristics such as:
 
 The application then uses the trained Machine Learning model to generate an estimated rental price.
 
+### 🚀 Live Demo
+
+[**Try the Lagos/Abuja Rent Prediction App**](https://lagos-abuja-rent-prediction.streamlit.app/)
+
 ### Application Preview
 
 ![Streamlit Application](screenshots/streamlit_app.png)
